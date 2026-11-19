@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Double Century 2026 - Game Plan</title><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body data-mode="plan">
+<div class="wrap">
+  <nav class="nav" style="margin-bottom:10px"><a href="index.html">Home</a> &middot; <a href="tool.html">The tool</a></nav>
+  <div class="card brief" id="brief" style="margin-bottom:14px"></div>
+  <div style="height:5px;border-radius:3px;margin:0 0 14px;background:linear-gradient(90deg,#1f56c4 0 33.3%,#f5f7fa 33.3% 66.6%,#ef4135 66.6% 100%)"></div>
+  <div class="top">
+    <div>
+      <h1>Pure <span style="color:var(--ac)">|</span> Savage X KOTAS👑<span style="color:var(--ac)">~</span> It's Always a Race</h1>
+      <p class="sub">12 rider team time trial. Two timed stops, top 6 stop the clock. Spend every rider, finish with 6 plus a backup.</p>
+      <p class="note" style="margin:6px 0 0"><b style="color:var(--tx)">Your edits are saved on this device only.</b></p>
+    </div>
+    <div class="hide-share" style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><div id="status" class="pill">Loading</div><span class="pill" title="build">Build 19</span><button class="pill" data-top="export" style="cursor:pointer">Export plan</button><button class="pill" data-top="import" style="cursor:pointer">Import plan</button><button class="pill" data-top="reset" style="cursor:pointer">Reset to defaults</button><button class="pill ok" data-top="send" style="cursor:pointer">Send my version to Matt</button></div>
+  </div>
+  <div id="msg" class="note" role="status" aria-live="polite" style="min-height:18px;margin-top:8px"></div>
+  <div class="facts" id="facts"></div>
+
+  <section>
+    <div class="sech"><h2>Route</h2><span class="note">Built from the official GPX. Tap a numbered subsector.</span></div>
+    <div class="card mapwrap" id="map"></div>
+  </section>
+
+  <section>
+    <div class="sech"><h2>Profile and sectors</h2><span class="note">Tap a band to open the subsector. Sectors 1, 2 and 3 are the timed segments.</span></div>
+    <div class="card profwrap" id="prof"></div>
+  </section>
+
+  <section>
+    <div class="sech"><h2>Climbs</h2><span class="note">From the GPX elevation. Shown in orange on the route and profile.</span></div>
+    <div class="card" style="overflow-x:auto" id="climbs"></div>
+  </section>
+
+  <section>
+    <div class="sech"><h2>Race plan board</h2><span class="note">Scroll sideways. Tap a sector header for detail, tap a rider chip for their summary.</span><button class="pill" id="cmpbtn" data-top="compact" style="cursor:pointer;margin-left:auto"></button></div>
+    <div class="scroller" id="board"></div>
+  </section>
+
+  <section>
+    <div class="sech"><h2>Rider allocation</h2><span class="note">Pick a brush, then tap cells to paint. Inspect opens the sector.</span></div>
+    <div class="tools" id="tools"></div>
+    <div class="scroller" id="grid"></div>
+  </section>
+
+  <section>
+    <div class="sech"><h2>Riders</h2><span class="note">Enter the 12 here. Team colour is the Savage grouping.</span></div>
+    <div class="card" style="overflow-x:auto" id="riders"></div>
+  </section>
+
+  <section>
+    <div class="sech"><h2>Route and sector setup</h2><span class="note">Boundaries and stops are set from the GPX waypoints. Edit if the route changes.</span></div>
+    <div class="card" style="overflow-x:auto" id="setup"></div>
+  </section>
+
+  <footer class="sitelinks" id="sitelinks" style="margin-top:28px">
+    <div class="sech"><h2>Website links</h2><span class="note">To be added.</span></div>
+    <div class="card" id="site-links">
+      <!-- ===== START WEBSITE LINKS: add links between these markers ===== -->
+      <span class="note">Website links will go here.</span>
+      <!-- ===== END WEBSITE LINKS ===== -->
+    </div>
+  </footer>
+</div>
+
+<div class="sheet" id="sheet"><div class="sheetin" id="sheetin"></div></div>
+
+
+  </div>
+</div>
+
+<!-- Static copy of the form for Netlify Forms detection. Do not remove. -->
+<form name="race-plan" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="race-plan">
+  <p><label>Leave this empty: <input name="bot-field"></label></p>
+  <input type="text" name="name">
+  <textarea name="comment"></textarea>
+  <textarea name="plan"></textarea>
+</form>
+
+<script src="master.js"></script>
+<script src="app.js"></script>
+</body></html>
